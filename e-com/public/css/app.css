@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 10vw;
+  position: relative;
+}
+header::before {
+  content: "";
+  width: 3vw;
+  height: 2vh;
+  text-decoration: underline;
+  position: absolute;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+header .left nav {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding-left: 2.5vw;
+}
+header .left nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5411764706);
+}
+header .left nav a:hover {
+  color: #c9621d;
+}
+header .right {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+header .right .profial {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=app.css.map */
