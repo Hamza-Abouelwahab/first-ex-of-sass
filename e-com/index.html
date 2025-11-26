@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="./public/css/app.css">
 </head>
 <body>
+
     <header>
+
         <div class="left">
+            <input type="checkbox" id="check">
+            <div>
+            <label class="menu" for="check">
+                <img src="./public/images/icon-menu.svg" alt="">
+            </label>
             <img src="./public/images/logo.svg" alt="logo">
+            </div>
             <nav>
+                <label class="close" for="check">
+                    <img  src="./public/images/icon-close.svg" alt="">
+                </label>
                 <a href="#">collections</a>
                 <a href="#">men</a>
                 <a href="">women</a>
@@ -19,11 +32,10 @@
             </nav>
         </div>
         <div class="right">
-
             <img src="./public/images/icon-cart.svg" alt="">
             <img class="profial" src="./public/images/image-avatar.png" alt="">
         </div>
-    </header>
+    </header> 
     <main>
         <div class="left">
             <span><img src="./public/images/image-product-1.jpg" alt=""></span>
@@ -38,12 +50,15 @@
             <span>sneaker company</span>
             <h1>fall limited edition sneakers</h1>
             <p>These low-profile sneakers are you perfect casual wear companion. Featuring a durble rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <div class="all">
             <div class="prix">
                 <h2>$125.00</h2>
                 <p>50%</p>
             </div>
+            <p class="line">$250.00%</p>
+            </div>
             <div class="btn">
-                <div>
+                <div class="add">
                     <span><a href=""><img src="./public/images/icon-minus.svg" alt=""></a></span>
                     <span>0</span>
                     <span><a href=""><img src="./public/images/icon-plus.svg" alt=""></a></span>

@@ -12,7 +12,7 @@ header {
 }
 header::before {
   content: "";
-  width: 74vw;
+  width: 79vw;
   height: 0.2vh;
   background-color: rgba(0, 0, 0, 0.1607843137);
   position: absolute;
@@ -40,19 +40,95 @@ header .left nav a:hover {
 header .right {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 2vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 header .right .profial {
-  width: 30%;
-  height: auto;
+  width: 10%;
   object-fit: cover;
+}
+
+#check {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: inline;
+  }
+  .close {
+    display: block;
+  }
+  header {
+    padding: 4vw 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+  }
+  header::before {
+    content: "";
+    width: 0;
+  }
+  header .left {
+    display: flex;
+    gap: 16vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .left div {
+    display: flex;
+    gap: 5vw;
+    padding-left: 2vw;
+  }
+  header .left nav {
+    gap: 6vw;
+    background: white;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 200vw 8vw;
+    width: 70%;
+    left: -350px;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  header .left nav label img {
+    width: 20px;
+  }
+  header .left nav a {
+    color: black;
+    font-weight: 500;
+  }
+  header .right {
+    width: 25%;
+  }
+  header .right .profial {
+    width: 30%;
+  }
+  header #check:checked ~ nav {
+    left: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3vw;
-  padding: 5vw 15vw;
+  padding: 5vw 10vw;
 }
 main .left {
   display: flex;
@@ -75,29 +151,41 @@ main .right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2vw;
+  gap: 1vw;
 }
 main .right span {
   font-size: 16px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5411764706);
+  margin: 0;
 }
 main .right h1 {
   text-transform: capitalize;
+  width: 90%;
+  margin: 0;
 }
 main .right p {
   color: rgba(0, 0, 0, 0.7215686275);
+  margin: 0;
 }
 main .right .prix {
   display: flex;
   align-items: center;
   gap: 1.5vw;
 }
+main .right .prix h2 {
+  margin: 0;
+}
 main .right .prix p {
   background-color: black;
   color: white;
   padding: 0.2vw 0.8vw;
   border-radius: 5px;
+  margin: 0;
+}
+main .right .line {
+  text-decoration: line-through;
+  margin: 0;
 }
 main .right .btn {
   display: flex;
@@ -108,8 +196,8 @@ main .right .btn div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1vw 1vw;
-  width: 20%;
+  padding: 0.5vw 1vw;
+  width: 30%;
   text-decoration: none;
   border-radius: 10px;
 }
@@ -117,17 +205,75 @@ main .right .btn button {
   display: flex;
   gap: 1vw;
   align-items: center;
-  padding: 1vw 4vw;
+  justify-content: center;
+  padding: 0.5vw 4vw;
   background-color: #e17a35;
   border-radius: 10px;
   border: none;
 }
 main .right .btn button img {
   filter: brightness(0) saturate(100%);
+  display: flex;
+  align-items: center;
 }
 main .right .btn button p {
-  font-size: 17px;
+  font-size: 20px;
   color: black;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  main .left {
+    display: flex;
+    flex-direction: column;
+  }
+  main .left span img {
+    width: 100vw;
+    border-radius: 0;
+  }
+  main .left div {
+    display: none;
+  }
+  main .right {
+    gap: 3vw;
+    padding: 8vw;
+  }
+  main .right p {
+    width: 90%;
+  }
+  main .right .all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .right .all .line {
+    padding: 0;
+    margin: 0;
+    width: 20%;
+  }
+  main .right .btn {
+    flex-direction: column;
+  }
+  main .right .btn .add {
+    width: 100%;
+    padding: 3vw 6vw;
+  }
+  main .right .btn button {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  main .right .btn button p {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
